@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection System</title>
+    <link rel="stylesheet" href="../static/menu.css">
+</head>
+<body>
+    <main>
+        <div class="container0">
+            <h1>Welcome, {{ username }}!</h1>
+            <p>Choose a detection method to analyze potential phishing threats.</p>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="button-group">
+                <div class="button-group">
+                    <a href="/check"><button>Upload & Check URLs</button></a>
+                    <a href="/analyze_headers"><button>Analyze Email Headers</button></a>
+                    <a href="/url_analysis"><button>Domain Reputation & SSL Check</button></a>
+                    <a href="/blacklist_lookup"><button>Blacklist Database Lookup</button></a>
+                    <a href="/ai_threat_detection"><button>AI-Based Threat Detection</button></a>
+                </div>            
+            </div>
+            <div class="info">
+                <p><strong>How It Works:</strong></p>
+                <ul>
+                    <li><strong>Bulk URL Checking:</strong> Upload a file with multiple URLs to scan them simultaneously, ideal for professionals handling multiple links.</li>
+                    <li><strong>Email Header Analysis:</strong> Paste an email header to check for spoofed addresses, forged sender details, and unusual relay paths.</li>
+                    <li><strong>Domain Reputation & SSL Check:</strong> Verify if a website has a valid SSL certificate and check its history for phishing activity.</li>
+                    <li><strong>Blacklist Lookup:</strong> Cross-check domains or URLs against blacklisted databases to detect potential threats.</li>
+                    <li><strong>AI-Based Threat Detection:</strong> Utilize machine learning to identify sophisticated phishing attacks and predict potential risks.</li>
+                </ul>
+                <p>By integrating real-time data and AI-driven analysis, our system provides advanced phishing detection and security measures. Stay safe by regularly analyzing suspicious links and emails.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-description">Protecting you from phishing threats with AI-driven technology.</p>
+            <p class="footer-copyright">&copy; 2025 Phishing Detection System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

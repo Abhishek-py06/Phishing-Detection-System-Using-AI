@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Email Headers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/analyze_email_headers.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container0">
+            <h1>Analyze Email Headers</h1>
+            <p>Paste email headers to analyze potential threats or authenticity.</p>
+        </div>
+    </div>
+    <hr>
+    <form id="analyze-headers-form" method="POST" action="/analyze_headers">
+        <div class="div1">
+            <textarea id="email-headers" name="email-headers" placeholder="Paste email headers here..." required rows="5"></textarea>
+        </div>
+        <div class="div2">
+            <button type="submit">Submit</button>
+        </div>
+        {% if result %}
+        <div class="result-card show {% if result.message.startswith('Error') or 'Not Safe' in result.message %}error{% else %}success{% endif %}" role="alert" aria-live="polite">
+            <pre>{{ result.message }}</pre>
+        </div>
+        {% endif %}
+    </form>
+</body>
+</html>

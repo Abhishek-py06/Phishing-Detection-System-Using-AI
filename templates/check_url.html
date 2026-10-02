@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Check URL for Phishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='check_url.css') }}">
+</head>
+<body>
+  <div class="hero">
+    <div class="container0">
+      <h1>Check URL for Phishing</h1>
+      <p>Enter a URL or upload a file to detect phishing attempts.</p>
+    </div>       
+  </div>
+  <hr>
+  <form id="check-url" enctype="multipart/form-data" action="/check" method="post">
+    <div class="parent1">
+      <div class="div1">
+        <input type="url" name="url" placeholder="https://example.com..." />
+      </div>
+      <div class="div2">
+        <button type="submit" title="Check URL" name="action" value="url">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="parent2">
+      <div class="file-upload">
+        <label for="file">Choose a file (.txt, .html, .csv)</label>
+        <input type="file" id="file" name="file" accept=".txt,.html,.csv" />
+        <span id="file-name">No file chosen</span>
+      </div>
+      <div class="div3">
+        <button type="submit" title="Upload File" name="action" value="file">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="20" height="20">
+            <path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM216 408c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-102.1-31 31c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l72-72c9.4-9.4 24.6-9.4 33.9 0l72 72c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-31-31L216 408z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="result" class="result-card"></div>
+  </form>
+
+  <script src="../static/check_url.js"></script>
+</body>
+</html>

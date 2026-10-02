@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container0 {
+    color: white;
+    padding: 170px 30px 0px 30px;
+    font-size: 30px;
+}
+
+.left {
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(90deg, #333446, #7F8CAA);
+    background-size: 200% 200%;
+    animation: policeLights 5s ease infinite;
+}
+
+@keyframes policeLights {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.right {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333446;
+}
+
+.login-box {
+    background: #B8CFCE;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin: 10px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-box input:active + label,
+.input-box input:not(:placeholder-shown) + label {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background: linear-gradient(90deg, #333446, #7F8CAA);
+    background-size: 200% 200%;
+    animation: policeLights 5s ease infinite;
+}
+
+.btn:hover {
+    background: #333446;
+    color: white;
+    transition: 0.5s;
+}
+
+.signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #145DA0;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.flash {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}

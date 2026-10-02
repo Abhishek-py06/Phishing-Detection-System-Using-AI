@@ -1,0 +1,29 @@
+# Python virtual environments
+phishing_detection_env/
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temporary files
+tempCodeRunnerFile.py
+
+# Environment/secrets
+.env
+
+# Local database
+instance/
+
+# Virtual environment metadata
+pyvenv.cfg
+# Local uploaded/generated files
+uploads/
+# Large unused model copy
+/phishing_model.pkl
+# Git
+.git/
+
+# IDE
+.vscode/
